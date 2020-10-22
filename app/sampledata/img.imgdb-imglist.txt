@@ -1,0 +1,2 @@
+fire-ext.png|img/fire-ext.png
+fire-hose.png|img/fire-hose.png
