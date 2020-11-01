@@ -14,7 +14,7 @@ import com.puo.arcore_project.R;
 
 public class MainMenu extends AppCompatActivity {
 
-    private LinearLayout ar, quiz;
+    private LinearLayout ar, quiz, about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainMenu extends AppCompatActivity {
         //Declare buttons and put on click listener to navigate to other pages
         ar = findViewById(R.id.ar);
         quiz = findViewById(R.id.quiz);
+        about = findViewById(R.id.about);
 
         ar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,13 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), QuizActivity.class));
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), AboutActivity.class));
             }
         });
     }
