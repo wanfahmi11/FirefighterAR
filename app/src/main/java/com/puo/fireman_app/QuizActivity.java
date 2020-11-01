@@ -151,7 +151,7 @@ public class QuizActivity extends AppCompatActivity implements ChoicesAdapter.Re
         answers.add("A. combustible materials");
         answers.add("B. electricity");
         answers.add("C. flammable gases and liquids");
-        questions.add(new Question("9. The most common fires in office environments are " +
+        questions.add(new Question("10. The most common fires in office environments are " +
                 "those that involve _____ ", 1, answers));
 
     }
@@ -204,7 +204,7 @@ public class QuizActivity extends AppCompatActivity implements ChoicesAdapter.Re
         questionImage.setVisibility(View.GONE);
         choicesList.clear();
         choicesAdapter.notifyDataSetChanged();
-        questionText.setText("Tahniah! \n Markah anda ialah " + score + "/" + questions.size());
+        questionText.setText("Congratulations! \n You scored " + score + "/" + questions.size());
     }
 
     @Override
