@@ -95,19 +95,19 @@ public class ARActivity extends AppCompatActivity {
             }
         };
 
-        videoView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (videoView.getVisibility() == View.VISIBLE) {
-                    if (videoView.isPlaying()) {
-                        videoView.pause();
-                    }
-                    else {
-                        videoView.resume();
-                    }
-                }
-            }
-        });
+//        videoView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (videoView.getVisibility() == View.VISIBLE) {
+//                    if (videoView.isPlaying()) {
+//                        videoView.pause();
+//                    }
+//                    else {
+//                        videoView.resume();
+//                    }
+//                }
+//            }
+//        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
