@@ -46,8 +46,14 @@ dependencies {
 
 //
 sceneform.asset('sampledata/models/fireext.obj',
-        'default',
+        'sampledata/models/fireext.mtl',
         'sampledata/fireext.sfa',
         'src/main/res/raw/fireext'
+)
+
+sceneform.asset('sampledata/models/firehose.fbx',
+        'default',
+        'sampledata/firehose.sfa',
+        'src/main/res/raw/firehose'
 )
 

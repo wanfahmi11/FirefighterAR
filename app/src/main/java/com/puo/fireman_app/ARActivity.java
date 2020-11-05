@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -53,7 +52,6 @@ public class ARActivity extends AppCompatActivity {
     private AnchorNode anchorNode;
     private Node node;
     private String augmentedName = "", lang;
-    private MediaPlayer mp;
     private ImageButton backButton;
     private VideoView videoView;
     private Handler handler;
@@ -96,6 +94,20 @@ public class ARActivity extends AppCompatActivity {
                 removeModel();
             }
         };
+
+        videoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (videoView.getVisibility() == View.VISIBLE) {
+                    if (videoView.isPlaying()) {
+                        videoView.pause();
+                    }
+                    else {
+                        videoView.resume();
+                    }
+                }
+            }
+        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -129,7 +141,10 @@ public class ARActivity extends AppCompatActivity {
                             videoView.start();
                             break;
                         case "fire-hose.png" :
-                            Toast.makeText(this, "Fire hose", Toast.LENGTH_SHORT).show();
+                            raw_path = R.raw.firehose;
+                            videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/raw/fire_hose_video"));
+                            videoView.setVisibility(View.VISIBLE);
+                            videoView.start();
                             break;
                     }
 
